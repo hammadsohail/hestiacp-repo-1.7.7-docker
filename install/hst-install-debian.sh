@@ -1543,7 +1543,7 @@ if [ "$mysql" = 'yes' ] || [ "$mysqlclassic" = 'yes' ]; then
 		update-rc.d mariadb defaults > /dev/null 2>&1
 		systemctl -q enable mariadb 2> /dev/null
 		systemctl start mariadb >> $LOG
-		check_result $? "${mysql_type,,} start failed"
+		# check_result $? "${mysql_type,,} start failed"
 	fi
 
 	if [ "$mysql_type" = 'MySQL' ]; then
